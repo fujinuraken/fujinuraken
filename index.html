@@ -26,7 +26,7 @@
        fillField("N",N);
     };
 function genQR(){
-       targetURL = "https://fujinuraken.github.io/index.html?";
+       targetURL = "https://fujinuraken.github.io/index.html";
        var F = document.getElementById("F").value;
        var I = document.getElementById("I").value;
        var O = document.getElementById("O").value;
@@ -43,7 +43,7 @@ function genQR(){
        usp.append("N",N);
 
        console.log(usp.toString());
-       document.getElementById("qrcode").src="https://api.qrcode-monkey.com/qr/custom/?data=" + targetURL + encodeURIComponent(usp.params);//usp.toString().replaceAll("&", "%26");
+       document.getElementById("qrcode").src="https://api.qrcode-monkey.com/qr/custom/?data=" + usp.toString().replaceAll("&", "%26");//usp.toString().replaceAll("&", "%26");
        document.getElementById("qrcode").style.display="block";
     };
 
