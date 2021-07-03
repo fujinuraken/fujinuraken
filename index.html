@@ -42,7 +42,7 @@ function genQR(){
        usp.append("N",N);
 
        console.log(usp.toString());
-       document.getElementById("qrcode").src="https://api.qrcode-monkey.com/qr/custom/?data=" + usp.toString().replaceAll("&", "%26");
+       document.getElementById("qrcode").src="https://api.qrcode-monkey.com/qr/custom/?data=" + targetURL + encodeURLComponent(usp.params);//usp.toString().replaceAll("&", "%26");
        document.getElementById("qrcode").style.display="block";
     };
 
